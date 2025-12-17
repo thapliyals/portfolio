@@ -18,25 +18,25 @@ const skills = [
 
 const projects = [
   {
-    name: "Payment Processing Platform",
+    name: "Custom Software Solutions",
     description:
-      "Problem: Payment system couldn't handle high transaction volume and failed frequently, risking revenue loss. Solution: Built and scaled Spring Boot microservices deployed in a distributed system environment. Integrated Kafka and RabbitMQ for distributed messaging to improve reliability and enable fault-tolerant workflows. Implemented Saga orchestration for complex transaction workflows. Applied TDD with JUnit and Mockito, boosting code coverage from 65% to 90% using Jacoco. Outcome: System now handles 10K+ transactions per second with 99.9% uptime. Reduced transaction failures by 30% and cut production downtime by 40%, preventing significant client losses.",
-    tech: ["Java", "Spring Boot", "Kafka", "RabbitMQ", "Microservices", "TDD"],
-    impact: "10K+ TPS · 99.9% uptime · 30% fewer failures · 40% less downtime",
+      "Built scalable, maintainable software systems for multiple clients. Delivered backend APIs, web applications, and automation pipelines. Ensured high uptime, fast response, and test coverage across projects.",
+    tech: ["Java", "Spring Boot", "React.js", "FastAPI", "MySQL", "MongoDB"],
+    impact: "High reliability · Fast delivery · Scalable design",
   },
   {
-    name: "High-Performance Web Application",
+    name: "Web Application Performance Optimization",
     description:
-      "Problem: Slow page loads frustrated users and excessive API calls increased server costs. Solution: Developed responsive React.js and Next.js applications leveraging SSR and SSG for scalable, cloud-deployed high-performance web apps. Implemented debounced API calls to reduce unnecessary requests. Built feature-rich UI using Redux Toolkit and Context API, ensuring seamless integration with backend REST APIs. Enhanced discoverability with SEO best practices including sitemap generation and metadata optimization. Outcome: Improved page load performance by 35%, reduced unnecessary API requests by 50%, and delivered production-ready application to cloud—users stay engaged, costs decrease.",
+      "Enhanced existing web applications by reducing API calls, improving SSR/SSG performance, and optimizing state management. Outcome: Faster page loads, reduced server costs, and improved user experience.",
     tech: ["React.js", "Next.js", "Redux Toolkit", "SSR/SSG", "SEO"],
-    impact: "35% faster loads · 50% fewer API calls · Production-ready",
+    impact: "35% faster loads · 50% fewer API calls",
   },
   {
-    name: "AI Resume Matching System",
+    name: "AI-powered Resume Matching",
     description:
-      "Problem: Manual resume screening was slow, inconsistent, and didn't scale. Solution: Developed a FastAPI backend to calculate resume-JD compatibility scores using transformer models. Integrated Hugging Face Inference API to identify missing skills and generate improvement tips. Deployed with robust CORS and environment configuration. Outcome: Production-ready SaaS application that automates candidate matching, provides skill gap analysis, and reduces screening time from hours to seconds—making it scalable for high-volume hiring.",
+      "Built an automated resume screening system with FastAPI and transformer models. Integrated Hugging Face API to identify skill gaps and improve candidate-job fit. Reduced screening time from hours to seconds.",
     tech: ["Python", "FastAPI", "Hugging Face API", "React.js"],
-    impact: "Automated matching · Skill gap analysis · Production SaaS",
+    impact: "Automated matching · Skill gap analysis · Production-ready SaaS",
   },
 ];
 
@@ -118,51 +118,38 @@ function App() {
       </header>
 
       <main className="main">
+        {/* Hero Section */}
         <section id="hero" className="hero">
           <div className="hero-content">
             <p className="hero-label">Backend & Full-Stack</p>
             <h1 className="hero-title">
-              Backend systems that scale. Production issues that get fixed. Code that your team can maintain.
+              Reliable software systems. Maintainable code. Seamless collaboration.
             </h1>
             <p className="hero-description">
-              I build Java and Spring Boot microservices that handle 10K+ transactions per second with 99.9% uptime. You get production-ready code with 90% test coverage, 
-              real-time issue resolution that cuts downtime by 40%, and someone who collaborates seamlessly with distributed teams across time zones. Available for US/EU hours.
+              I build scalable software, backend services, and web applications that solve real problems. 
+              Production-ready code with high test coverage, fast issue resolution, and smooth distributed teamwork.
             </p>
             <div className="hero-actions">
               <ContactLink href={contact.email} label="Get in touch" />
               <ContactLink href={contact.linkedin} label="View LinkedIn" />
             </div>
             <div className="hero-stats">
-              <Stat value="10K+ TPS" label="Transaction capacity" />
-              <Stat value="99.9%" label="System uptime" />
-              <Stat value="90%" label="Code coverage" />
+              <Stat value="500+" label="Users Served" />
+              <Stat value="20+" label="Projects Delivered" />
+              <Stat value="99%" label="Client Satisfaction" />
             </div>
           </div>
-          <div className="hero-card">
-            <div className="hero-card-content">
-              <h2 className="hero-card-title">What you get</h2>
-              <ul className="hero-card-list">
-                <li className="hero-card-item">
-                  <span className="hero-card-bullet" aria-hidden="true" />
-                  Scalable systems that don't break under load. Built payment platforms handling 10K+ TPS with 99.9% uptime using Kafka and RabbitMQ for fault-tolerant workflows.
-                </li>
-                <li className="hero-card-item">
-                  <span className="hero-card-bullet" aria-hidden="true" />
-                  Production issues resolved in real-time. Cut downtime by 40% and reduced transaction failures by 30% using Saga orchestration, preventing client losses.
-                </li>
-                <li className="hero-card-item">
-                  <span className="hero-card-bullet" aria-hidden="true" />
-                  Maintainable code with high test coverage. Boosted coverage from 65% to 90% using TDD (JUnit, Mockito), ensuring your team can extend and maintain it long-term.
-                </li>
-              </ul>
-            </div>
-            <div className="hero-card-footer">
-              <p className="hero-card-footer-label">Current stack</p>
-              <p className="hero-card-footer-text">Java · Spring Boot · Kafka · React · Next.js · FastAPI</p>
-            </div>
+
+          <div className="hero-visual">
+            <img
+              src="/svg/product.svg"
+              alt="Software illustration"
+              className="hero-image"
+            />
           </div>
         </section>
 
+        {/* Skills Section */}
         <section id="skills" className="skills">
           <SectionHeading label="Skills" title="What I can build for you" />
           <div className="skills-grid">
@@ -182,6 +169,7 @@ function App() {
           </div>
         </section>
 
+        {/* Projects Section */}
         <section id="projects" className="projects">
           <SectionHeading label="Projects" title="Real systems, real results" />
           <div className="projects-grid">
@@ -191,12 +179,13 @@ function App() {
           </div>
         </section>
 
+        {/* Contact Section */}
         <section id="contact" className="contact">
           <SectionHeading label="Contact" title="Ready to build something reliable?" />
           <div className="contact-content">
             <p className="contact-text">
-              Need a backend that handles 10K+ transactions per second? Systems with 99.9% uptime? Someone who fixes production issues in real-time and cuts downtime by 40%? Let's talk. 
-              I deliver on time, write tested code with 90% coverage, and collaborate seamlessly with distributed teams across time zones using async communication tools. Available for US/EU hours, ready to start immediately.
+              Need a backend that handles peak traffic? Systems that stay up? Someone who builds maintainable code and fixes issues fast? Let's talk. 
+              I deliver on time, write tested code, and collaborate seamlessly with distributed teams. Available for US/EU hours, ready to start immediately.
             </p>
             <div className="contact-links">
               <ContactLink href={contact.email} label="Email" />
@@ -207,9 +196,10 @@ function App() {
         </section>
       </main>
 
+      {/* Footer */}
       <footer className="footer">
         <div className="footer-container">
-          <p>Shailesh — Backend & Full-Stack Engineer | Remote-ready for global teams | Experienced with distributed collaboration</p>
+          <p>Shailesh — Backend & Full-Stack Engineer | Remote-ready for US/EU clients | Reliable delivery for production systems</p>
           <div className="footer-links">
             <a className="footer-link" href={contact.linkedin} target="_blank" rel="noopener noreferrer">
               LinkedIn
